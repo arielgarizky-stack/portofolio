@@ -1,97 +1,589 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M9HF6V2G');</script>
-<!-- End Google Tag Manager -->
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D33HNTWZP9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D33HNTWZP9');
-</script>
-
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D33HNTWZP9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D33HNTWZP9');
-</script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Biodata Diri</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ariel Abdul Rizky Sigiro | Web Developer</title>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D33HNTWZP9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D33HNTWZP9');
+</script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-M9HF6V2G');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" />
+
+  <style>
+    :root {
+      --bg: #f5f6f8;
+      --muted: #6e7681;
+      --primary: #0094e9;
+      --card: #ffffff;
+      --accent: #f4f4f6;
+      --text: #1b1f23;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: 20px auto 0;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: linear-gradient(135deg, #e6eefb, #f6f8ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(10, 20, 40, 0.06);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: 1.05rem;
+      margin: 0
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin: 0
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a.active {
+      color: var(--primary)
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 28px 20px;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(10, 20, 40, 0.06);
+      text-align: center;
+    }
+
+    h2 {
+      color: var(--muted);
+      margin: 12px 0 6px;
+      font-weight: 600;
+      font-size: 1.2rem
+    }
+
+    h1.main {
+      margin: 0;
+      color: var(--text);
+      font-size: 2rem
+    }
+
+
+
+    h3 {
+      margin: 16px 0 10px;
+      font-size: 1.1rem
+    }
+
+    .social-container {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #111;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: transform .18s ease, box-shadow .18s ease;
+      opacity: 0;
+      animation: fadeSlideIn 0.8s forwards;
+    }
+
+    .social-icon:nth-child(1) {
+      animation-delay: 0.2s
+    }
+
+    .social-icon:nth-child(2) {
+      animation-delay: 0.4s
+    }
+
+    .social-icon:nth-child(3) {
+      animation-delay: 0.6s
+    }
+
+    .social-icon i {
+      font-size: 16px
+    }
+
+    .social-icon:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(10, 20, 40, 0.08)
+    }
+
+    /* specific colors */
+    .facebook {
+      background: #3b82f6;
+      color: white
+    }
+
+    .instagram {
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+      color: white
+    }
+
+    .github {
+      background: #0f172a;
+      color: white
+    }
+
+    .linkedin {
+      background: #0a66c2;
+      color: white
+    }
+
+    /* Animasi kiri-kanan */
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-40px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Projects styles (ditambahkan) */
+    .projects-wrap {
+      text-align: left;
+      margin-top: 28px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .project-card {
+      background: linear-gradient(180deg, #ffffff, #fbfcfe);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 8px 20px rgba(10, 20, 40, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .project-img {
+      height: 160px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #eee;
+    }
+
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .project-title {
+      font-weight: 700;
+      color: var(--text);
+      font-size: 1rem
+    }
+
+    .project-desc {
+      color: var(--muted);
+      font-size: 0.95rem
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 6px 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--muted)
+    }
+
+    .project-actions {
+      display: flex;
+      gap: 8px
+    }
+
+    .btn {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #e6e9ef;
+      color: var(--text)
+    }
+
+    /* single column responsive */
+    @media (max-width:800px) {
+      .projects-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* Responsive */
+    @media (max-width:768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .brand {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      main {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+    }
+
+    @media (max-width:480px) {
+      .header-divider {
+        margin: 12px auto
+      }
+
+      .avatar {
+        width: 60px;
+        height: 60px;
+      }
+
+      header h1 {
+        font-size: 1rem;
+      }
+
+      header p {
+        font-size: 0.8rem;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+      }
+
+      h1.main {
+        font-size: 1.5rem;
+      }
+
+      .social-icon {
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+
+      .social-icon i {
+        font-size: 14px;
+      }
+    }
+ .header-divider {
+      height: 4px;
+      width: 100%;
+      max-width: 1100px;
+      margin: 18px auto;
+      border-radius: 2px;
+      /* buat pola putus-putus dengan repeating-linear-gradient */
+      background-image: repeating-linear-gradient(90deg,
+          rgba(0, 148, 233, 0.95) 0 10px,
+          rgba(0, 148, 233, 0) 10px 22px);
+      background-size: 200% 100%;
+      /* animasi menggerakkan pola ke kiri */
+      animation: dashMove 2.2s linear infinite;
+      will-change: background-position;
+    
+      /* full-bleed (lebar viewport) dashed animated divider */
+      height: 4px;
+      width: 100vw;
+      max-width: none;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 18px 0;
+      border-radius: 2px;
+      /* pola putus-putus */
+      background-image: repeating-linear-gradient(
+        90deg,
+        rgba(0,148,233,0.95) 0 14px,
+        rgba(0,148,233,0) 14px 28px
+      );
+      background-size: 300% 100%;
+      animation: dashMove 2.2s linear infinite linear;
+      will-change: background-position;
+    }
+  /* Footer */
+    footer.site-footer{
+      margin-top:48px;
+      border-top:1px solid rgba(10,20,40,0.04);
+      background:transparent;
+    }
+    .footer-inner{
+      max-width:1100px;margin:0 auto;padding:28px 20px;display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;
+    }
+    .footer-col{min-width:200px;flex:1}
+    .footer-col h4{margin-bottom:12px}
+    .footer-bottom{margin-top:12px;padding-top:12px;border-top:1px solid rgba(10,20,40,0.04);text-align:center;color:var(--muted);font-size:13px}
+
+    @keyframes dashMove {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: -10% 0;
+      }
+    
+    }
+  </style>
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9HF6V2G"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  <div class="container">
-    <div class="profile-card">
-         <img src="" alt="Foto Profil" class="profile-img">
-      <p class="title">Web Developer</p>
-     
-      <p>📍 Jakarta, Indonesia</p>
-
-      <div class="biodata">
-        <h3>Biodata Diri</h3>
-        <ul>
-          <li><strong>Nama:</strong> Ariel Abdul Rizky Sigiro</li>
-          <li><strong>Tempat, Tanggal Lahir:</strong> Jakarta,06 Juni 2006</li>
-          <li><strong>Jenis Kelamin:</strong> Laki-laki</li>
-          <li><strong>Alamat:</strong> Jl. H Nehran 01 N0. 48</li>
-          <li><strong>Email:</strong> arielgarizky@gmail.com</li>
-          <li><strong>Telepon:</strong> 085773383665</li>
-          <li><strong>Media Sosial : <br>
-            
-      <!-- Social media links: ganti href dengan tautan Anda -->
-      <div class="social-links" aria-label="Link media sosial">
-      
-
-        <a href="https://www.linkedin.com/in/username" target="_blank" class="medsos" rel="noopener noreferrer" aria-label="LinkedIn" data-medsos="linkedin">
-          <!-- LinkedIn SVG -->
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11.001 5.001A2.5 2.5 0 014.98 3.5zM3 8.98h4v12H3v-12zM9.5 8.98h3.83v1.64h.06c.53-1.01 1.82-2.08 3.75-2.08 4.01 0 4.75 2.64 4.75 6.07v6.37h-4v-5.64c0-1.35-.03-3.09-1.88-3.09-1.88 0-2.17 1.47-2.17 2.99v5.74h-4v-12z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-
-        <a href="https://www.instagram.com/arielabrzky?igsh=eWJ1c3QxYncyYjN3" class="medsos" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-medsos="instagram">
-          <!-- Instagram SVG -->
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A4.5 4.5 0 1016.5 13 4.5 4.5 0 0012 8.5zm5.5-3.8a1.2 1.2 0 11-1.2 1.2 1.2 1.2 0 011.2-1.2z"/></svg>
-          <span>Instagram</span>
-        </a>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9HF6V2G" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header class="heder"> 
+    <div class="brand">
+      <div class="avatar">
+        <img src="https://i.pinimg.com/474x/50/23/d6/5023d6380549cae455578375db224f34.jpg" alt="Foto Profil">
       </div>
-        </strong></li>
-        </ul>
+      <div>
+        <h1>Ariel Abdul Rizky Sigiro</h1>
+        <p>Web Developer • Jakarta, Indonesia</p>
       </div>
-
-      <button id="toggleTheme">Ganti Tema</button>
-       <!-- Link untuk mengganti halaman -->
-      <p style="margin-top:12px;">
-        <a href="ariel-coba.html" id="switchPage" class="switch-link" style="display:inline-block;padding:8px 12px;border-radius:8px;background:#0094e9;color:#fff;text-decoration:none;">Lihat Projek</a>
-      </p>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <nav>
+      <a href="#" class="active">Home</a>
+      <a href="contact.html" id="contact">Contact</a>
+      <a href="index.html" class="back-project">Tentang Saya</a>
+    </nav>
+  </header>
+   <!-- Pembatas antara header dan main -->
+   <div class="header-divider" role="separator" aria-hidden="true"></div>
+
+  <main>
+    <h2>Ariel Abdul Rizky Sigiro</h2>
+    <h1 class="main">Web Developer</h1>
+    <div class="divider"></div>
+
+    <h3>Find me on social media</h3>
+
+    <div class="social-container">
+      <a class="social-icon instagram another-medsos" href="https://www.instagram.com/arielabrzky" target="_blank"
+        rel="noopener noreferrer" data-another-medsos="instagram"><i
+          class="fab fa-instagram"></i><span>Instagram</span></a>
+      <a class="social-icon github another-medsos" href="https://github.com/ArielAbdulRizkyS" target="_blank"
+        rel="noopener noreferrer" data-another-medsos="github"><i class="fab fa-github"></i><span>GitHub</span></a>
+      <a class="social-icon linkedin another-medsos" href="https://www.linkedin.com/in/username" target="_blank"
+        rel="noopener noreferrer" data-another-medsos="linkedin"><i
+          class="fab fa-linkedin-in"></i><span>LinkedIn</span></a>
+    </div>
+  </main>
+  <main>
+    <!-- Projects section (diisi dengan konten projek) -->
+    <section class="projects-wrap" aria-labelledby="projects-heading">
+      <h3 id="projects-heading" style="margin-top:28px">Project Saya</h3>
+
+      <p class="project-intro" style="color:var(--muted);margin-top:6px">Beberapa proyek yang pernah saya kerjakan —
+        klik "Lihat" untuk demo atau "Source" untuk kode.</p>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuDjas07rZNINLkk3hzCJAebcK8geSm8Z3Vg&s"
+              alt="Project Portfolio Screenshot">
+          </div>
+          <div>
+            <div class="project-title">Portfolio Personal</div>
+            <div class="project-desc">Website portofolio responsive untuk menampilkan biodata, proyek, dan kontak.
+              Dibuat dengan HTML, CSS, dan sedikit JavaScript untuk interaksi.</div>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-actions" style="margin-top:auto">
+            <a href="#" class="btn btn-primary projek-ariel" target="_blank" rel="noopener noreferrer"
+              data-projek-ariel="Portfolio Personal">Lihat</a>
+            <a href="https://github.com/superil06062006-cpu/portofolio-ariel" class="btn btn-outline projek-ariel"
+              data-repository="Portfolio Personal" target="_blank" rel="noopener noreferrer">Source</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-img">
+            <img
+              src="https://images.unsplash.com/photo-1526378726916-0f1a3d6b3f63?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+              alt="Project App Screenshot">
+          </div>
+          <div>
+            <div class="project-title">To‑Do Web App</div>
+            <div class="project-desc">Aplikasi daftar tugas sederhana dengan penyimpanan lokal (localStorage). Fokus
+              pada kegunaan dan aksesibilitas.</div>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">JavaScript</span>
+              <span class="tag">localStorage</span>
+              <span class="tag">A11y</span>
+            </div>
+          </div>
+          <div class="project-actions" style="margin-top:auto">
+            <a href="movie.html" class="btn btn-primary projek-ariel" target="_blank" rel="noopener noreferrer"
+              data-projek-ariel="rating-film">Lihat</a>
+            <a href="https://github.com/username/todo-app" class="btn btn-outline projek-ariel" target="_blank"
+              data-repository="rating-film" rel="noopener noreferrer">Source</a>
+          </div>
+        </article>
+
+        <!-- Project 3 (contoh) -->
+        <article class="project-card">
+          <div class="project-img">
+            <img
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder"
+              alt="Project API Screenshot">
+          </div>
+          <div>
+            <div class="project-title">Weather Dashboard</div>
+            <div class="project-desc">Dashboard cuaca sederhana menggunakan API pihak ketiga. Menampilkan cuaca hari ini
+              dan 5 hari ke depan.</div>
+            <div class="tags" style="margin-top:8px">
+              <span class="tag">Fetch API</span>
+              <span class="tag">Responsive</span>
+            </div>
+          </div>
+          <div class="project-actions" style="margin-top:auto">
+            <a href="https://example.com/weather" class="btn btn-primary projek-ariel" target="_blank"
+              rel="noopener noreferrer" data-projek-ariel="prakiraan cuaca">Lihat</a>
+            <a href="https://github.com/username/weather-dashboard" class="btn btn-outline projek-ariel" target="_blank"
+              rel="noopener noreferrer" data-repository="prakiraan cuaca">Source</a>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+   <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Ariel Abdul Rizky Sigiro</h4>
+        <p style="color:var(--muted);font-size:14px">Web developer — front-end & small backend, focus on performance & accessibility.</p>
+      </div>
+
+    
+      <div style="flex-basis:100%;height:0;"></div>
+
+      <div class="footer-bottom">© 2025 Ariel Abdul Rizky Sigiro — Rights Reserved.</div>
+    </div>
+  </footer>
   <script>
   // Matikan klik kanan
   document.addEventListener("contextmenu", function(e) {
     e.preventDefault();
   });
-
-  // Matikan beberapa shortcut umum (bisa dibypass tapi lumayan ngusirin bocil)
+    
   document.addEventListener("keydown", function(e) {
     // F12
     if (e.key === "F12") {
@@ -114,10 +606,4 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 </html>
-
-
-
-
-
-
 
